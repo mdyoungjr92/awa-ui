@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Season } from "./season";
-import { SEASONS } from "./mocks";
+import { Season } from "domain/season";
+import { SeasonService } from "services/season/season.service";
+import { LandSearchService } from "services/land-search/land-search.service";
 
 @Component({
   selector: 'land-search',
@@ -15,12 +16,14 @@ export class LandSearchComponent implements OnInit {
 
   search: string;
 
-  seasons = SEASONS;
+  seasons: Season[];
   selectedSeasons: Season[] = [];
 
-  constructor() { }
+  constructor(private seasonService: SeasonService) { }
 
-  ngOnInit() {  }
+  ngOnInit() {
+    this.seasonService.getAvailableSeasons().subscribe(seasons => this.seasons = seasons);
+  }
 
   isSelected(season: Season) : boolean {
     return this.selectedSeasons.indexOf(season) != -1;

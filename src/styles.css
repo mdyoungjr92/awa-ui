@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Material Theme */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 /* Application-wide Styles */
 h1 {
   color: #369;
