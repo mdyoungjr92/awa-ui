@@ -1,0 +1,35 @@
+#member-reservation-report-layout  {
+	width: 800px;
+}
+
+#member-reservation-report-layout .display-table,
+#member-reservation-report-layout table {
+	font-size: 6pt;
+}
+
+#member-reservation-report-layout .display-table th,
+#member-reservation-report-layout table th {
+	border: 1px solid #DDD;
+	white-space: normal;
+}
+
+#member-reservation-report-layout .display-table td,
+#member-reservation-report-layout table td {
+	border: 1px solid #DDD;
+}
+
+#harvest-report-farm-display-layout {
+	width: 800px;
+	margin-left: 15px;
+}
+
+#harvest-report-farm-display-layout .display-table {
+	font-size: 6pt;
+	width=100%;
+}
+
+#harvest-report-farm-display-layout .display-table ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}

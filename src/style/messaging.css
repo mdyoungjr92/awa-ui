@@ -1,0 +1,34 @@
+/* 
+    Document   : messaging.css
+    Created on : May 17, 2008, 6:32:37 PM
+    Author     : riksca
+    Description:
+        Stylesheet for messaging "popups".  Putting this in
+        seperate file to force loading on the first release.  If 
+        awa.css is not reloaded, messaging will look really strange.
+*/
+
+
+#message-required-read {
+    position:absolute;
+    margin:0;
+    padding: 25px;
+    top:0;
+    left: 5em;
+    border: 1px solid BLACK;
+    background: white;
+}
+#message-required-subject {
+    border: 1px solid #DDD;
+    white-space: nowrap;
+}
+#message-required-body {
+    padding-top: 0.25em;
+}
+#message-required-textarea {
+    background: white;
+}
+#message-required-buttons {
+    text-align: right;
+}
+

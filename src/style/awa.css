@@ -1,0 +1,1608 @@
+/*
+	Global site styles	
+*/
+a:link {
+	color: rgb(0, 0, 153)
+}  /* for unvisited links */
+a:visited {
+	color: rgb(0, 0, 153)
+}  /* for visited links */
+a:active {
+	color: rgb(255, 0, 102)
+}  /* when link is clicked */
+a:hover {
+	color: rgb(0, 96, 255)
+}  /* when mouse is over link */
+html {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+table {
+	border: 2px solid #DDD;
+	border-collapse: collapse;
+	padding: 5px;
+	font-size: 10pt;
+	font-family: Arial;
+}
+
+th {
+	border-collapse: collapse;
+	padding: 5px;
+	white-space: nowrap;
+}
+
+td {
+	border-collapse: collapse;
+	padding: 5px;
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+hr {
+	padding: 3px;
+}
+
+select {
+	border: 1px solid #DDD;
+}
+
+/*
+	Anchor tag tooltips
+ */
+a.info {
+	position: relative; /*this is the key*/
+	z-index: 24;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.info:hover {
+	z-index: 25;
+	background-color: #EEEEEE;
+}
+
+a.info span.data {
+	display: none
+}
+
+a.info:hover span.data { /*the span will display just on :hover state*/
+	display: block;
+	position: absolute;
+	top: 2em;
+	left: 2em;
+	width: 15em;
+	border: 1px solid #AAAAAA;
+	background-color: #EEEEEE;
+	text-align: center;
+}
+
+/*
+	Class definitions
+ */
+.error {
+	font-family: Verdana, Arial, San-Serif;
+	font-size: 11px;
+	color: red;
+	clear: both;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	list-style: none;
+	margin: 0px;
+	padding-left: 0px;
+}
+
+td.form-label {
+	text-align: right;
+}
+
+td.form-input {
+	text-align: left;
+}
+
+td.form-divider {
+	text-align: left;
+	background: #CCCCCC;
+}
+
+td.form-buttons {
+	text-align: right;
+}
+
+table.brief-display th {
+	border: 1px solid #DDD;
+}
+
+table.brief-display td {
+	border: 1px solid #DDD;
+}
+
+div.form-buttons {
+	float: right;
+	text-align: right;
+	clear: both;
+}
+
+.menu-header,.menu-item {
+	font-family: "trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: smaller;
+}
+
+.menu-header {
+	border: 1px solid #AAAAAA;
+	background: #CCCCCC;
+	padding-left: 7px;
+}
+
+.menu-item:hover {
+	background: #DDD;
+}
+
+.menu-item {
+	background: #EEEEEE;
+	padding-left: 14px;
+	border-top: 0px solid #AAAAAA;
+	border-right: 1px solid #AAAAAA;
+	border-bottom: 1px solid #AAAAAA;
+	border-left: 1px solid #AAAAAA;
+}
+
+.menu-item a {
+	text-decoration: none;
+	display: block;
+}
+
+.text-box {
+	border: 1px solid #DDD;
+}
+
+.wizard-logout-name {
+	float: right;
+	text-align: right;
+	font-style: italic;
+	clear: both;
+}
+
+.wizard-logout-link {
+	float: right;
+	text-align: right;
+	clear: both;
+}
+
+.wizard-reservation-update-date {
+	float: left;
+	text-align: left;
+	font-style: italic;
+	font-weight: bold;
+	color: red;
+	clear: both;
+}
+
+.land-picker-day {
+	clear: both;
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+.land-picker-day table {
+	width: 100%;
+}
+
+.land-picker-day th {
+	border: 1px solid #DDD;
+}
+
+.land-picker-day td {
+	border: 1px solid #DDD;
+}
+
+.land-picker-date-row {
+	background: #009933;
+}
+
+.land-picker-farm-title-row,.land-picker-seasons-row {
+	background: #C0C0C0;
+}
+
+.land-picker-seasons-row ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.land-picker-units-display {
+	text-align: left;
+}
+
+.land-picker-units-display ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.land-picker-units-display li {
+	float: left;
+	width: 200px;
+}
+
+.guest-picker-day {
+	clear: both;
+	padding-top: 5px;
+	padding-bottom: 15px;
+	width: 100%;
+}
+
+.guest-picker-day table {
+	width: 100%;
+}
+
+.guest-picker-day th {
+	border: 1px solid #DDD;
+}
+
+.guest-picker-day td {
+	border: 1px solid #DDD;
+}
+
+.guest-picker-num-floats {
+	font-weight: bold;
+	float: left;
+	clear: both;
+	width: 100%;
+}
+
+.guest-type-list {
+	text-align: left;
+}
+
+.guest-type-list ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.guest-type-list li {
+	float: left;
+	width: 100px;
+}
+
+.guest-picker-date-row {
+	background: #009933;
+}
+
+.confirmation-date {
+	clear: both;
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+.confirmation-date table {
+	width: 100%;
+}
+
+.confirmation-date-row,.confirmation-reservtion-display-row {
+	background: #009933;
+	font-weight: bold;
+}
+
+.confirmation-change-link {
+	clear: right;
+	font-size: 8pt;
+}
+
+.confirmation-farms-list {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.confirmation-farm {
+	width: 50px;
+	float: left;
+	clear: both;
+}
+
+.confirmation-county {
+	float: left;
+	width: 150px;
+}
+
+.confirmation-units {
+	float: left;
+}
+
+.confirmation-guest-list {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.confirmation-opportunity-list {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.confirmation-message-list {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+
+.confirmation-message-list td {
+	white-space: normal;
+}
+
+.confirmation-farm-block {
+
+}
+
+.confirmation-message-farm-number {
+	float: left;
+	white-space: nowrap;
+}
+
+.confirmation-message-unit-label {
+	clear: left;
+	white-space: nowrap;
+}
+
+.confirmation-message {
+	white-space: normal;
+}
+
+#guest-selection-instructions {
+	white-space: normal;
+	color: red;
+	font-weight: bold;
+}
+
+/* Layout IDs */
+#page-banner {
+	background: url(/images/AWAReserveLogo2.gif) no-repeat top left;
+	position: absolute;
+	margin: 0px;
+	top: 10px;
+	left: 10px;
+	height: 150px;
+	width: 300px;
+}
+
+#page-data {
+	position: absolute;
+	top: 150px;
+}
+
+#login-form {
+	position: absolute;
+	left: 15px;
+	width: 1024px;
+}
+
+#login-form table {
+	margin-left: 20px;
+}
+
+#password-changed-text {
+	margin-left: 20px;
+	padding-bottom: 5px;
+}
+
+#nav-column {
+	position: absolute;
+	left: 10px;
+	width: 200px;
+	text-align: left;
+}
+
+#wizard-nav-column {
+	position: absolute;
+	left: 10px;
+	width: 250px;
+	text-align: left;
+}
+
+#data-column {
+	position: absolute;
+	left: 220px;
+	width: 800px;
+}
+
+#wizard-data-column {
+	position: absolute;
+	left: 255px;
+	width: 800px;
+}
+
+#wizard-data-column table {
+	clear: both;
+}
+
+#wizard-no-menu-layout {
+	position: absolute;
+	left: 15px;
+	width: 750px;
+}
+
+#game-listing {
+	width: 640px;
+	text-align: left;
+}
+
+#game-listing ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#game-listing li {
+	float: left;
+	width: 200px;
+	text-overflow: ellipsis;
+}
+
+#game-listing a {
+	text-decoration: none;
+	display: block;
+}
+
+#game-listing a:hover {
+	background: #DDD;
+}
+
+#opportunity-listing {
+	width: 640px;
+	text-align: left;
+}
+
+#opportunity-listing ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#opportunity-listing li {
+	float: left;
+	width: 200px;
+	text-overflow: ellipsis;
+}
+
+#opportunity-listing a {
+	text-decoration: none;
+	display: block;
+}
+
+#opportunity-listing a:hover {
+	background: #DDD;
+}
+
+#state-priv {
+	width: 640px;
+	text-align: left;
+}
+
+#state-priv ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#state-priv li {
+	float: left;
+	width: 150px;
+	text-overflow: ellipsis;
+}
+
+#opp-priv {
+	width: 680px;
+	text-align: left;
+}
+
+#opp-priv ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#opp-priv li {
+	list-style-type: none;
+	float: left;
+	width: 335px;
+}
+
+#default-radio-style ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#opp-heading {
+	width: 100%;
+	text-align: center;
+}
+
+#opp-done-button {
+	width: 100%;
+	text-align: right;
+	clear: both;
+	padding-top: 10px;
+}
+
+#opps-available-column {
+	width: 49%;
+	float: left;
+	text-align: left;
+	border: 1px solid #AAAAAA;
+	height: inherit;
+}
+
+#opps-available-column h4 {
+	text-align: center;
+}
+
+#opps-available-column ul {
+	list-style: none;
+	margin: 0px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+#opps-selected-column {
+	width: 49%;
+	float: right;
+	text-align: left;
+	border: 1px solid #AAAAAA;
+	height: inherit;
+}
+
+#opps-selected-column h4 {
+	text-align: center;
+}
+
+#opps-selected-column ul {
+	list-style: none;
+	margin: 0px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+#guest-form-layout {
+	position: absolute;
+	left: 15px;
+	width: 1024px;
+}
+
+#guest-form-layout table {
+	margin-left: 20px;
+}
+
+#member-privilege-layout {
+	position: absolute;
+	left: 15px;
+	width: 1024px;
+}
+
+#member-privilege-layout table {
+	margin-left: 20px;
+}
+
+#member-security-layout {
+	position: absolute;
+	left: 15px;
+	width: 1024px;
+}
+
+#member-security-layout table {
+	margin-left: 20px;
+}
+
+#farm-list-layout {
+	position: absolute;
+	left: 15px;
+	width: 1024px;
+}
+
+#farm-list-layout table {
+	margin-left: 20px;
+}
+
+#farm-map-upload-layout {
+	position: absolute;
+	left: 15px;
+	width: 1024px;
+}
+
+#farm-map-upload-layout table {
+	margin-left: 20px;
+}
+
+#farm-message-layout {
+	position: absolute;
+	left: 15px;
+	width: 1024px;
+}
+
+#farm-message-layout table {
+	margin-left: 20px;
+}
+
+#messages-list-layout {
+	position: absolute;
+	left: 15px;
+	width: 1024px;
+}
+
+#messages-list-layout table {
+	margin-left: 20px;
+}
+
+#message-list {
+	width: 500px;
+	white-space: normal;
+}
+
+#message-list ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#message-list li {
+	padding-bottom: 5px;
+	white-space: normal;
+}
+
+#message-list a:hover {
+	background: #DDD;
+}
+
+#blackout-days-list {
+	width: 560px;
+}
+
+#blackout-days-list ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#blackout-days-list li {
+	float: left;
+	padding-right: 10px;
+}
+
+#blackout-dates-list ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#blackout-dates-list li {
+	padding-bottom: 3px;
+}
+
+#blackout-dates-list a:hover {
+	background: #DDD;
+}
+
+#farm-blackout-date-layout {
+	position: absolute;
+	left: 15px;
+	width: 1024px;
+}
+
+#farm-blackout-date-layout table {
+	margin-left: 20px;
+}
+
+#legacy-report-links a,
+#by-laws-links a,
+#land-map-links a {
+	padding-right: 5px;
+}
+
+#unit-opportunities {
+	width: 560px;
+	text-align: left;
+}
+
+#unit-opportunities ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#unit-opportunities li {
+	float: left;
+	width: 275px;
+}
+
+#current-reservations-text {
+	font-weight: bold;
+	float: left;
+	clear: both;
+}
+
+#current-reservations-instructions {
+	float: left;
+	clear: both;
+	width: 190px;
+}
+
+#no-reservations-text {
+	margin-left: 10px;
+	float: left;
+	clear: both;
+	font-style: italic;
+	width: 180px;
+}
+
+#current-reservation-list {
+	text-align: left;
+}
+
+#current-reservation-list ul {
+	list-style: none;
+	margin: 10px;
+	padding: 0px;
+}
+
+#current-reservation-list li {
+	float: left;
+	clear: left;
+	white-space: nowrap;
+}
+
+#current-reports-text {
+	font-weight: bold;
+	float: left;
+	clear: both;
+	padding-top: 20px;
+}
+
+#current-reports-instructions {
+	float: left;
+	clear: both;
+	width: 190px;
+}
+
+#current-reports-list {
+	text-align: left;
+}
+
+#current-reports-list ul {
+	list-style: none;
+	margin: 10px;
+	padding: 0px;
+	white-space: nowrap;
+}
+
+#current-reports-list li {
+	float: left;
+	clear: left;
+}
+
+#outstanding-reports-text {
+	font-weight: bold;
+	float: left;
+	clear: both;
+	padding-top: 20px;
+}
+
+#outstanding-reports-instructions {
+	float: left;
+	clear: both;
+	width: 190px;
+}
+
+#outstanding-reports-warning {
+	float: left;
+	clear: both;
+	font-weight: bold;
+	width: 190px;
+	color: red;
+}
+
+#outstanding-reports-list {
+	text-align: left;
+}
+
+#outstanding-reports-list ul {
+	list-style: none;
+	margin: 10px;
+	padding: 0px;
+	white-space: nowrap;
+}
+
+#outstanding-reports-list li {
+	float: left;
+	clear: left;
+}
+
+#message-list-view {
+	float: left;
+	clear: both;
+	padding-top: 20px;
+	font-style: italic;
+	width: 190px;
+}
+
+#harvest-report-view-instructions {
+	float: left;
+	clear: both;
+	padding-top: 20px;
+	font-style: italic;
+	width: 190px;
+}
+
+#franchise-by-laws-view-instructions {
+	float: left;
+	clear: both;
+	padding-top: 20px;
+	font-style: italic;
+	width: 190px;
+}
+
+#farm-map-list {
+	float: left;
+	clear: both;
+	padding-top: 20px;
+	font-style: italic;
+	width: 190px;
+}
+
+#shared-reservations-list {
+	float: left;
+	clear: both;
+	padding-top: 20px;
+	font-style: italic;
+	width: 190px;
+}
+
+#reservation-land-search-instructions {
+	font-weight: bold;
+	padding-bottom: 10px;
+	clear: both;
+}
+
+#land-picker-fee-disclaimer {
+	color: red;
+	font-weight: bold;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	clear: both;
+}
+
+#reservation-member-search-instructions {
+	padding-bottom: 5px;
+	clear: both;
+}
+
+#reservation-member-picker-instructions {
+	font-weight: bold;
+	padding-bottom: 10px;
+	clear: both;
+}
+
+#member-constraint-link {
+	font-weight: bold;
+	padding-bottom: 10px;
+	clear: both;
+}
+
+#guest-picker-instructions {
+	padding-top: 5px;
+	font-weight: bold;
+	float: left;
+	width: 100%;
+}
+
+#guest-picker-no-guest {
+	padding-bottom: 5px;
+	float: left;
+	clear: both;
+	width: 100%;
+}
+
+#guest-picker-bottom-error {
+	clear: both;
+	float: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: red;
+}
+
+#confirmation-print-button {
+	float: right;
+	clear: both;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#confirmation-reservation-number {
+	
+}
+
+#confirmation-farm-label {
+	
+}
+
+#confirmation-group-label {
+	
+}
+
+#confirmation-opportunity-label {
+	
+}
+
+#confirmation-fee-warning {
+	color: red;
+	font-weight: bold;
+	white-space: normal;
+}
+
+#notification-report-instructions {
+	padding-bottom: 5px;
+	clear: both;
+}
+
+#notification-report-links {
+	padding-top: 15px;
+	clear: both;
+}
+
+#notification-report-links ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#reservation-report-farm-list {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#harvest-report-entry-layout {
+	position: absolute;
+	left: 15px;
+	width: 1024px;	
+}
+
+#harvest-report-entry-name {
+	float: left;
+}
+
+#havest-member-name-label {
+	font-weight: bold;
+	float: left;
+	padding-right: 10px;
+}
+
+#harvest-member-name {
+	float: left;
+	display: inline;
+}
+
+#harvest-logout-link {
+	float: left;
+	clear: both;
+	padding-bottom: 10px;
+}
+
+#harvest-report-entry-member-credentials {
+	float: right;
+	clear: none;
+	display: inline;
+	width: 600px;
+}
+
+#harvest-member-id-label {
+	float: left;
+	display: inline;
+	font-weight: bold;
+	padding-right: 10px;
+}
+
+#harvest-member-id {
+	float: left; 
+	display: inline;
+	padding-right: 20px;
+}
+
+#harvest-reservation-number-label {
+	float: left;
+	display: inline;
+	font-weight: bold;
+	padding-right: 10px;
+}
+
+#harvest-reservation-number {
+	float: left; 
+	display: inline;
+	padding-right: 20px;
+}
+
+#harvest-date-label {
+	float: left;
+	display: inline;
+	font-weight: bold;
+	padding-right: 10px;
+}
+
+#harvest-date {
+	float: left;
+}
+
+#harvest-report-did-not-hunt {
+	padding-top: 10px;
+	clear: both;
+}
+#harvest-report-did-not-hunt.input {
+	padding-right: 10px;
+}
+
+.harvest-report-entry-farm-did-not-hunt {
+	padding-top: 10px;
+	clear: both;
+}
+.harvest-report-entry-farm-did-not-hunt.input {
+	padding-right: 10px;
+}
+
+#harvest-report-group-size {
+	clear: both;
+	padding-top: 20px;
+}
+
+#harvest-report-group-size.label {
+	padding-right: 10px;
+}
+
+.harvest-report-entry-farm {
+	padding-top: 20px;
+}
+
+.harvest-report-entry-farm-divider {
+	clear: both;
+	text-align: left;
+	float: left;
+	font-weight: bold;
+	background-color: #009933;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+
+.harvest-report-entry-unit-table {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+	clear: both;
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 2px solid #DDD;
+	
+}
+
+#harvest-report-entry-buttons {
+	clear: both;
+	float: left;
+	text-align: left;
+}
+
+#harvest-report-radio-style ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#harvest-report-radio-style li {
+	float: left;
+	padding-right: 5px;
+}
+
+#harvest-report-entry-general {
+	clear: both;
+}
+
+#harvest-report-personal-notes {
+	float: left;
+	clear: both;
+	padding-bottom: 15px;
+}
+
+#harvest-report-personal-notes-label {
+	float: left;
+	white-space: nowrap;
+}
+
+#harvest-report-personal-notes-instruction {
+	padding-left: 15px;
+	padding-right: 15px;
+	font-family: sans-serif;
+	font-size: 10pt;
+	color: #0001A0;
+	float: right;
+	width: 500px;
+}
+
+#harvest-report-weather-condition {
+	float: left;
+	clear: both;
+	padding-bottom: 15px;
+}
+
+#harvest-report-weather-condition-label {
+	float: left;
+	white-space: nowrap;
+}
+
+#harvest-report-weather-condition textarea {
+	float: left;
+	clear: left;
+}
+
+#harvest-report-road-condition {
+	float: left;
+	clear: both;
+	padding-bottom: 15px;
+}
+
+#harvest-report-road-condition-label {
+	float: left;
+	white-space: nowrap;
+}
+
+#harvest-report-road-condition textarea {
+	float: left;
+	clear: left;
+}
+
+#harvest-report-farm-list-layout {
+	width: 1024px;
+	margin-left: 15px;
+}
+
+#harvest-report-farm-list-layout .member-link a {
+	float: right;
+	text-align: right;
+	width: 100%;
+	clear: both;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 0px;
+}
+
+#harvest-report-farm-list-layout .expand-link {
+	margin-bottom: 10px;
+	float: left;
+	padding-left: 10px;
+	font-size: 11pt;
+}
+
+#harvest-report-farm-list-layout .club-farm-display,
+#harvest-report-farm-list-layout .club-farm-display-minimized {
+	float: left;
+	clear: both;
+	width: 100%;
+    margin-top: 10px;
+	margin-bottom: 20px;
+    border: 1px solid;
+}
+
+#harvest-report-farm-list-layout .club-farm-display .club-header,
+#harvest-report-farm-list-layout .club-farm-display-minimized .club-header {
+	white-space: nowrap;
+	background-color: #009933;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+#harvest-report-farm-list-layout .club-farm-display .club-header .club-name,
+#harvest-report-farm-list-layout .club-farm-display-minimized .club-header .club-name {
+	margin-bottom: 10px;
+	float: left;
+	padding-left: 5px;
+}
+
+#harvest-report-farm-list-layout .club-farm-display .club-header .club-legacy-report-url,
+#harvest-report-farm-list-layout .club-farm-display-minimized .club-header .club-legacy-report-url {
+	margin-bottom: 10px;
+	float: right;
+	padding-right: 5px;
+}
+
+#harvest-report-farm-list-layout .club-farm-display-minimized .state-farms-display,
+#harvest-report-farm-list-layout .club-farm-display-minimized .state-farms-display-minimized {
+	display: none;
+}
+
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display,
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display-minimized {
+	float: left;
+	clear: both;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display .state-header,
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display-minimized .state-header {
+	background-color: #C0C0C0;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	margin-bottom: 10px;	
+	font-weight: bold;
+	clear: both;
+}
+
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display .state-header .state-label,
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display-minimized .state-header .state-label {
+	float: left;
+	margin-left: 10px;
+}
+
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display .county-farms-display {
+	float: left;
+	clear: both;
+	padding-bottom: 10px;
+	width: 100%;
+}
+
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display-minimized .county-farms-display,
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display-minimized .county-farms-display-minimized {
+	display: none;
+}
+
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display .county-farms-display .county-header,
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display .county-farms-display-minimized .county-header {
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	clear: both;
+}
+
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display .county-farms-display .county-header .county-label,
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display .county-farms-display-minimized .county-header .county-label {
+	margin-left: 20px;
+	float: left;
+}
+
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display .county-farms-display-minimized ul {
+	display: none;
+}
+
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display .county-farms-display ul {
+	list-style: none;
+	padding: 0px;
+	margin-top: 2px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+}
+
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display .county-farms-display ul li {
+	padding-right: 3px;
+	padding-bottom: 3px;
+	float: left;
+	width: 300px;
+}
+
+#harvest-report-farm-list-layout .club-farm-display .state-farms-display .county-farms-display ul li a {
+	padding-right: 5px;
+}
+
+.harvest-report-done-button {
+	float: right;
+	text-align: right;
+	clear: both;
+	width: 1024px;
+}
+
+#harvest-report-farm-display-layout {
+	width: 1024px;
+	margin-left: 15px;
+}
+
+#harvest-report-farm-display-layout .display-table {
+	font-size: 9pt;
+	width=100%;
+	border-spacing: 3px;
+}
+
+#harvest-report-farm-display-layout .display-table th {
+	border: 1px solid #DDD;
+	white-space: normal;
+}
+
+#harvest-report-farm-display-layout .display-table td {
+	border: 1px solid #DDD;
+	white-space: normal;
+}
+
+#harvest-report-farm-display-layout .display-table ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#member-reservation-report-layout  {
+	width: 1024px;
+	margin-left: 15px;
+}
+
+#member-reservation-report-layout .display-table {
+	font-size: 9pt;
+	width: 100%;
+	border-spacing: 3px;
+}
+
+#member-reservation-report-layout .display-table th {
+	border: 1px solid #DDD;
+	white-space: normal;
+}
+
+#member-reservation-report-layout .display-table td {
+	border: 1px solid #DDD;
+}
+
+#harvest-report-didnothunt-layout  {
+	width: 1024px;
+	margin-left: 15px;
+}
+
+#harvest-report-didnothunt-layout .display-table {
+	font-size: 9pt;
+	width=100%;
+	border-spacing: 3px;
+}
+
+#harvest-report-didnothunt-layout .display-table th {
+	border: 1px solid #DDD;
+	white-space: normal;
+}
+
+#harvest-report-didnothunt-layout .display-table td {
+	border: 1px solid #DDD;
+}
+
+#cancelled-report-layout  {
+	width: 1024px;
+	margin-left: 15px;
+}
+
+#cancelled-report-layout .display-table {
+	font-size: 9pt;
+	width=100%;
+	border-spacing: 3px;
+}
+
+#cancelled-report-layout .display-table th {
+	border: 1px solid #DDD;
+	white-space: normal;
+}
+
+#cancelled-report-layout .display-table td {
+	border: 1px solid #DDD;
+}
+
+#disclaimer {
+	font-size: 10pt;
+	color: #999999;
+}
+
+#disclaimer h3 {
+	display: none;
+}
+
+#disclaimer p  {
+	margin-top: 10px;
+}
+
+#farm-reservation-report-layout  {
+	width: 1024px;
+	margin-left: 15px;
+}
+
+#farm-reservation-report-layout .display-table {
+	font-size: 9pt;
+	width=100%;
+	border-spacing: 3px;
+}
+
+#farm-reservation-report-layout .display-table th {
+	border: 1px solid #DDD;
+	white-space: normal;
+}
+
+#farm-reservation-report-layout .display-table td {
+	border: 1px solid #DDD;
+}
+
+#farm-reservation-report-layout .display-table ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#farm-map-listing-layout {
+	width: 1024px;
+	margin-left: 15px;
+}
+
+#farm-map-listing-layout .member-link a {
+	float: right;
+	text-align: right;
+	width: 100%;
+	clear: both;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 0px;
+}
+
+#farm-map-listing-layout .expand-link {
+	margin-bottom: 10px;
+	float: left;
+	padding-left: 10px;
+	font-size: 11pt;
+}
+
+#farm-map-listing-layout .club-farm-display,
+#farm-map-listing-layout .club-farm-display-minimized {
+	float: left;
+	clear: both;
+	width: 100%;
+    margin-top: 10px;
+	margin-bottom: 20px;
+    border: 1px solid;
+}
+
+#farm-map-listing-layout .club-farm-display .club-header,
+#farm-map-listing-layout .club-farm-display-minimized .club-header {
+	white-space: nowrap;
+	background-color: #009933;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+#farm-map-listing-layout .club-farm-display .club-header .club-name,
+#farm-map-listing-layout .club-farm-display-minimized .club-header .club-name {
+	margin-bottom: 10px;
+	float: left;
+	padding-left: 5px;
+}
+
+#farm-map-listing-layout .club-farm-display .club-header .club-legacy-report-url,
+#farm-map-listing-layout .club-farm-display-minimized .club-header .club-legacy-report-url {
+	margin-bottom: 10px;
+	float: right;
+	padding-right: 5px;
+}
+
+#farm-map-listing-layout .club-farm-display-minimized .state-farms-display,
+#farm-map-listing-layout .club-farm-display-minimized .state-farms-display-minimized {
+	display: none;
+}
+
+#farm-map-listing-layout .club-farm-display .state-farms-display,
+#farm-map-listing-layout .club-farm-display .state-farms-display-minimized {
+	float: left;
+	clear: both;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+#farm-map-listing-layout .club-farm-display .state-farms-display .state-header,
+#farm-map-listing-layout .club-farm-display .state-farms-display-minimized .state-header {
+	background-color: #C0C0C0;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	margin-bottom: 10px;	
+	font-weight: bold;
+	clear: both;
+}
+
+#farm-map-listing-layout .club-farm-display .state-farms-display .state-header .state-label,
+#farm-map-listing-layout .club-farm-display .state-farms-display-minimized .state-header .state-label {
+	float: left;
+	margin-left: 10px;
+}
+
+#farm-map-listing-layout .club-farm-display .state-farms-display .county-farms-display {
+	float: left;
+	clear: both;
+	padding-bottom: 10px;
+	width: 100%;
+}
+
+#farm-map-listing-layout .club-farm-display .state-farms-display-minimized .county-farms-display,
+#farm-map-listing-layout .club-farm-display .state-farms-display-minimized .county-farms-display-minimized {
+	display: none;
+}
+
+#farm-map-listing-layout .club-farm-display .state-farms-display .county-farms-display .county-header,
+#farm-map-listing-layout .club-farm-display .state-farms-display .county-farms-display-minimized .county-header {
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	clear: both;
+}
+
+#farm-map-listing-layout .club-farm-display .state-farms-display .county-farms-display .county-header .county-label,
+#farm-map-listing-layout .club-farm-display .state-farms-display .county-farms-display-minimized .county-header .county-label {
+	margin-left: 20px;
+	float: left;
+}
+
+#farm-map-listing-layout .club-farm-display .state-farms-display .county-farms-display-minimized ul {
+	display: none;
+}
+
+#farm-map-listing-layout .club-farm-display .state-farms-display .county-farms-display ul {
+	list-style: none;
+	padding: 0px;
+	margin-top: 2px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+}
+
+#farm-map-listing-layout .club-farm-display .state-farms-display .county-farms-display ul li {
+	padding-right: 3px;
+	padding-bottom: 3px;
+	float: left;
+	width: 300px;
+}
+
+#farm-map-listing-layout .club-farm-display .state-farms-display .county-farms-display ul li a {
+	padding-right: 5px;
+}
+
+.farm-map-listing-done-button {
+	float: right;
+	text-align: right;
+	clear: both;
+	width: 1024px;
+}
+
+#farm-reservation-report-layout .clear-table {
+	border: 0;
+	padding: 0;
+	font-size: 10pt;
+	font-family: Arial;
+	width: 100%; 
+}
+
+#farm-reservation-report-layout .clear-table td {
+	border: 0;
+	padding-right: 5px;
+	padding-bottom: 3px;
+	padding-top: 0;
+	
+}
+.state_box {
+	border: 1px solid #DDD;
+    clear: both;
+    float: left;
+    margin-top: 0.5em;
+	width: 680px;
+}
+.state_label {
+	font-weight: bold;
+    padding-left: .75em;
+}
+#generic-instructions {
+	font-weight: bold;
+	padding-bottom: 10px;
+	clear: both;
+}
