@@ -1,6 +1,6 @@
 import { Season } from './season';
 
-export class StateSeason {
+export class StateSeasonContainer {
   state: string;
   seasons: Season[];
 }

@@ -1,18 +1,32 @@
 <mat-horizontal-stepper [linear]="true" #stepper>
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill out your name</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-      </mat-form-field>
-      <div>
+      <ng-template matStepLabel>Select Seasons and Search for Farms</ng-template>
+      <div class="first-form-group">
+        <mat-form-field>
+          <input matInput placeholder="State, County or Farm" formControlName="firstCtrl" required>
+        </mat-form-field>
+
+        <mat-expansion-panel *ngFor="let stateSeason of stateSeasons">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{stateSeason.state}} Opportunities
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-selection-list>
+            <mat-list-option *ngFor="let season of stateSeason.seasons"
+                (click)="onSelect(season)">
+                {{season.state}} - {{season.name}}
+            </mat-list-option>
+          </mat-selection-list>
+        </mat-expansion-panel>
         <button mat-button matStepperNext>Next</button>
       </div>
     </form>
   </mat-step>
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your address</ng-template>
+      <ng-template matStepLabel>Choose your Land</ng-template>
       <mat-form-field>
         <input matInput placeholder="Address" formControlName="secondCtrl" required>
       </mat-form-field>

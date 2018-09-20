@@ -1,0 +1,8 @@
+.first-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-form-group > * {
+  width: 100%;
+}
