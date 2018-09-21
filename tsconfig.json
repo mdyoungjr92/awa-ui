@@ -20,9 +20,12 @@
     "paths": {
       "components/*": [ "app/components/*" ],
       "domain/*": [ "app/domain/*" ],
-      "mock/*": [ "app/mock/*" ],
+      "forms/*": ["app/forms/*"],
+      "guards/*": ["app/guards/*"],
+      "helpers/*": ["app/helpers/*"],
+      "modules/*": ["app/modules/*"],
       "services/*": [ "app/services/*" ],
-      "modules/*": ["app/modules/*"]
+      "mock/*": [ "app/mock/*" ]
     }
   }
 }

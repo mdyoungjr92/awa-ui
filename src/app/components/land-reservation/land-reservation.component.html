@@ -1,5 +1,5 @@
 <mat-horizontal-stepper [linear]="true" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
+  <mat-step [stepControl]="firstFormGroup" [completed]="false">
     <form [formGroup]="firstFormGroup" (ngSubmit)="firstFormSubmit()">
       <ng-template matStepLabel>Select Seasons and Search for Farms</ng-template>
       <div class="first-form-group">
@@ -25,7 +25,7 @@
       </div>
     </form>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
+  <mat-step [stepControl]="secondFormGroup" [completed]="false">
     <form [formGroup]="secondFormGroup">
       <ng-template matStepLabel>Choose your Land</ng-template>
       <mat-expansion-panel *ngFor="let land of availableLand">
@@ -51,7 +51,7 @@
       </div>
     </form>
   </mat-step>
-  <mat-step>
+  <mat-step [completed]="false">
     <ng-template matStepLabel>Done</ng-template>
     You are now done.
     <div>

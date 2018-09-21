@@ -9,6 +9,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatChipsModule,
     MatExpansionModule,
     MatDividerModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule
   ],
   exports: [
     MatButtonModule,
@@ -34,7 +36,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatChipsModule,
     MatExpansionModule,
     MatDividerModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule
   ],
   declarations: []
 })
