@@ -8,6 +8,7 @@ import {MatInputModule} from '@angular/material';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatInputModule,
     MatChipsModule,
     MatExpansionModule,
-    MatDividerModule
+    MatDividerModule,
+    MatToolbarModule
   ],
   exports: [
     MatButtonModule,
@@ -31,7 +33,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatInputModule,
     MatChipsModule,
     MatExpansionModule,
-    MatDividerModule
+    MatDividerModule,
+    MatToolbarModule
   ],
   declarations: []
 })
