@@ -10,6 +10,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   imports: [
@@ -24,7 +26,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatExpansionModule,
     MatDividerModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule,
+    MatBadgeModule
   ],
   exports: [
     MatButtonModule,
@@ -37,7 +41,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatExpansionModule,
     MatDividerModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule,
+    MatBadgeModule
   ],
   declarations: []
 })
