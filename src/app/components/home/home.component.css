@@ -1,0 +1,25 @@
+.home {
+    padding: 40px;
+}
+
+.home a {
+    text-decoration: none;
+}
+
+.home ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.home li {
+	float: left;
+    width: 200px;
+    padding: 20px;
+}
+
+.home-card {
+    max-width: 200px;
+    height: 100px;
+    padding: 20px;
+}

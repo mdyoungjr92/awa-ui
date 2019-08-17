@@ -1,57 +1,13 @@
 <mat-horizontal-stepper [linear]="true" #stepper>
-  <mat-step [stepControl]="firstFormGroup" [completed]="false">
-    <form [formGroup]="firstFormGroup" (ngSubmit)="firstFormSubmit()">
-      <ng-template matStepLabel>Select Seasons and Search for Farms</ng-template>
-      <div class="first-form-group">
-        <mat-form-field>
-          <input matInput placeholder="State, County, Farm #" formControlName="firstCtrl" required>
-        </mat-form-field>
-        <mat-expansion-panel *ngFor="let stateSeason of stateSeasons">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              {{stateSeason.state}} Opportunities
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <mat-selection-list>
-            <mat-list-option *ngFor="let season of stateSeason.seasons"
-              (click)="onSeasonSelect(season)">
-                {{season.name}}
-            </mat-list-option>
-          </mat-selection-list>
-        </mat-expansion-panel>
-      </div>
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
+  <mat-step [stepControl]="landStep">
+    <ng-template matStepLabel>Land Search</ng-template>
+    <land-search [reservationContainer]="reservationContainer"></land-search>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup" [completed]="false">
-    <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Choose your Land</ng-template>
-      <mat-expansion-panel *ngFor="let land of availableLand">
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-              {{land.availableDate}}
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <ng-container *ngFor="let availableFarm of land.availableFarms">
-          <mat-selection-list>
-            <ng-container *ngFor="let farm of availableFarm.farms">
-                <mat-list-option before *ngFor="let unit of farm.units; last as last">
-                  State: {{ availableFarm.state }} Farm: {{farm.number}} - Unit: {{unit.name}} ({{unit.acreage}} acres)
-                </mat-list-option>
-                <mat-divider [inset]="true"></mat-divider>
-            </ng-container>
-          </mat-selection-list>
-        </ng-container>
-      </mat-expansion-panel>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
+  <mat-step [completed]="landSelectStepCompleted">
+    <ng-template matStepLabel>Land Select</ng-template>
+    <land-select [reservationContainer]="reservationContainer"></land-select>
   </mat-step>
-  <mat-step [completed]="false">
+  <mat-step>
     <ng-template matStepLabel>Done</ng-template>
     You are now done.
     <div>

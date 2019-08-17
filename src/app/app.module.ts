@@ -8,8 +8,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AwaMaterialModule } from 'modules/awa-material/awa-material.module';
-// import {MatIconRegistry} from '@angular/material/icon';
-// import {DomSanitizer} from '@angular/platform-browser';
 
 import { LandReservationComponent } from './components/land-reservation/land-reservation.component';
 import { AlertComponent } from './components/alert/alert.component';
@@ -24,6 +22,8 @@ import { AuthenticationService } from 'services/authentication/authentication.se
 import { UserService } from 'services/user/user.service';
 
 import { fakeBackendProvider } from 'mock/fake-backend';
+import { LandSearchComponent } from './components/land-reservation/land-search/land-search.component';
+import { LandSelectComponent } from './components/land-reservation/land-select/land-select.component';
 
 
 @NgModule({
@@ -32,7 +32,9 @@ import { fakeBackendProvider } from 'mock/fake-backend';
     LandReservationComponent,
     AlertComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    LandSearchComponent,
+    LandSelectComponent
   ],
   imports: [
     BrowserModule,

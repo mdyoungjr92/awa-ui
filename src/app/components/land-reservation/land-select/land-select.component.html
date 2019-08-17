@@ -1,0 +1,25 @@
+<form (ngSubmit)="selectFormSubmit()">
+    <ng-template matStepLabel>Choose your Land</ng-template>
+    <mat-expansion-panel *ngFor="let land of reservationContainer.availableLand">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{land.availableDate}}
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-container *ngFor="let availableFarm of land.availableFarms">
+            <mat-selection-list>
+                <ng-container *ngFor="let farm of availableFarm.farms">
+                    <mat-list-option before *ngFor="let unit of farm.units; last as last">
+                        State: {{ availableFarm.state }} Farm: {{farm.number}} - Unit: {{unit.name}} ({{unit.acreage}}
+                        acres)
+                    </mat-list-option>
+                    <mat-divider [inset]="true"></mat-divider>
+                </ng-container>
+            </mat-selection-list>
+        </ng-container>
+    </mat-expansion-panel>
+    <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+    </div>
+</form>

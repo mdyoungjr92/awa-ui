@@ -1,13 +1,34 @@
-<h1>Hi {{currentUser.firstName}}!</h1>
-<p>You're logged in with Angular 6!!</p>
-<nav>
-  <a routerLink="/reserve">Make a Reservation</a>
-</nav>
-<h3>All registered users:</h3>
-<ul>
-    <li *ngFor="let user of users">
-        {{user.username}} ({{user.firstName}} {{user.lastName}})
-        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+<div class="home">
+
+  <ul>
+    <li>
+      <a routerLink="/reserve">
+        <mat-card class="home-card">
+          <mat-card-title>Reservations</mat-card-title>
+          <mat-card-content>
+            Make a new reservation or update an existing one
+          </mat-card-content>
+        </mat-card>
+      </a>
     </li>
-</ul>
-<p><a [routerLink]="['/login']">Logout</a></p>
+    <li>
+      <a routerLink="/reserve">
+        <mat-card class="home-card">
+          <mat-card-title>Harvest Reports</mat-card-title>
+          <mat-card-content>
+            Enter or review harvest reports
+          </mat-card-content>
+        </mat-card>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/login">
+        <mat-card class="home-card">
+          <mat-card-title>Logout</mat-card-title>
+          <mat-card-content>
+          </mat-card-content>
+        </mat-card>
+      </a>
+    </li>
+  </ul>
+</div>
